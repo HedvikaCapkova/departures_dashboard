@@ -1,0 +1,23 @@
+/* pridat promenne na barvy */
+
+body {
+    font-family: 'Gothic A1';
+    background-color: #ded5c7;
+}
+table{
+    border-spacing: initial;
+}
+
+.tram__rowHeader{
+    background-color: #865942;
+    color: #ded5c7;
+}
+.tram__line{
+    border: 0;
+}
+.tram__line:nth-child(odd){
+    background-color: #e9e3df;
+}
+.tram__line--2:nth-child(even){
+    background-color: #e9e3df
+}
