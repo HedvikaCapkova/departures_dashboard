@@ -1,23 +1,31 @@
-/* pridat promenne na barvy */
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('font/Century_Gothic.ttf') format('truetype');
+}
+html{
+    font-family: 'Century Gothic';
+}
+:root{
+    --clr-background: #ded5c7;
+    --clr-dark:#865942;
+    --clr-light: #e9e3df;
+}
 
 body {
-    font-family: 'Gothic A1';
-    background-color: #ded5c7;
+    background-color:var(--clr-background);
 }
 table{
     border-spacing: initial;
 }
 
 .tram__rowHeader{
-    background-color: #865942;
-    color: #ded5c7;
+    background-color: var(--clr-dark) ;
+    color: var(--clr-background);
 }
-.tram__line{
-    border: 0;
-}
+
 .tram__line:nth-child(odd){
-    background-color: #e9e3df;
+    background-color: var(--clr-light);
 }
 .tram__line--2:nth-child(even){
-    background-color: #e9e3df
+    background-color:var(--clr-light);
 }
