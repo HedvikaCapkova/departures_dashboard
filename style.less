@@ -24,6 +24,23 @@ th {
 body {
   background-color: var(--clr-background);
 }
+main {
+  display: grid;
+  grid-template: ' tram train ' / 1fr 1fr;
+  @media only screen and (max-width: 1000px) {
+    grid-template:
+      ' tram '
+      ' train ';
+  }
+}
+.tram {
+  grid-area: tram;
+}
+
+.train {
+  grid-area: train;
+}
+
 .table {
   border-spacing: initial;
   width: 100%;
@@ -41,10 +58,21 @@ body {
     &:nth-child(odd) {
       background-color: var(--clr-light);
     }
+    &--train:nth-child(even) {
+      background-color: var(--clr-light);
+    }
   }
   &__cell {
     &--center {
       text-align: center;
     }
+  }
+}
+.weather {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(30px, auto);
+
+  &__item1 {
   }
 }
