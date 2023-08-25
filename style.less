@@ -27,19 +27,24 @@ body {
 .table {
   border-spacing: initial;
   width: 100%;
-}
-.table__header {
-  background-color: var(--clr-dark);
-  color: var(--clr-background);
-  text-align: left;
-}
-.table__header--bold {
-  font-weight: 700;
-  font-size: 25px;
-}
-.table__row:nth-child(odd) {
-  background-color: var(--clr-light);
-}
-.table__cell--center {
-  text-align: center;
+  &__header {
+    background-color: var(--clr-dark);
+    color: var(--clr-background);
+    text-align: left;
+
+    &--bold {
+      font-weight: 700;
+      font-size: 25px;
+    }
+  }
+  &__row {
+    &:nth-child(odd) {
+      background-color: var(--clr-light);
+    }
+  }
+  &__cell {
+    &--center {
+      text-align: center;
+    }
+  }
 }
