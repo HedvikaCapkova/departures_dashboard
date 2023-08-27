@@ -23,12 +23,29 @@ th {
 }
 body {
   background-color: var(--clr-background);
+  margin: 15px;
+}
+.vehicleImg {
+  display: block;
+  margin: 12px auto 0;
+}
+.tram .vehicleImg {
+  width: 28px;
+}
+.train .vehicleImg {
+  width: 33px;
+}
+.arrowImg {
+  display: block;
+  margin: auto;
+  width: 23px;
 }
 main {
   display: grid;
   grid-template: ' tram train ' / 1fr 1fr;
+  gap: 15px;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   main {
     grid-template: ' tram ' ' train ';
   }
@@ -47,10 +64,15 @@ main {
   background-color: var(--clr-dark);
   color: var(--clr-background);
   text-align: left;
+  padding-top: 12px;
+  font-size: 13px;
 }
 .table__header--bold {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
+}
+.table__header--bigger {
+  font-size: 20px;
 }
 .table__row:nth-child(odd) {
   background-color: var(--clr-light);
@@ -62,7 +84,38 @@ main {
   text-align: center;
 }
 .weather {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: minmax(30px, auto);
+  grid-auto-flow: column;
+  padding-top: 12px;
+}
+.weather__day {
+  display: grid;
+  grid-template: ' date1 forecast1 ' ' date2 forecast1 ' ' date3 forecast2 ' / auto auto;
+  place-items: center;
+}
+.weather__date--1 {
+  grid-area: date1;
+}
+.weather__date--2 {
+  grid-area: date2;
+}
+.weather__date--3 {
+  grid-area: date3;
+}
+.weather__date--today {
+  font-size: 22px;
+}
+.weather__date--nextDay {
+  font-size: 12px;
+}
+.weather__date--nextDay:first-of-type {
+  align-self: end;
+}
+.weather__forecast--1 {
+  grid-area: forecast1;
+}
+.weather__forecast--2 {
+  grid-area: forecast2;
 }
